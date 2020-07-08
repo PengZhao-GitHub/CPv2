@@ -1,0 +1,15 @@
+.productLogo {
+    width: 50px;
+    height: 50px;
+    filter: hue-rotate(200deg) ;
+    border-radius: 50%;
+    border: 1px #aaa solid;
+}
+
+.companylogo {
+    width: 70px;
+    height: 25px;
+    opacity: 90%;
+    border-radius: 4px;
+    border: 1px #aaa solid;
+}

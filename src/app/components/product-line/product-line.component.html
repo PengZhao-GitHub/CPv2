@@ -1,0 +1,23 @@
+<div>
+    
+    <!--
+    <img src="http://localhost:1337/uploads/Screen_Shot_2020_07_07_at_14_02_10_923f3957bb.png" alt="">
+    -->
+    <!--
+    <img src="{{logoUrl}}" alt="">
+    -->
+    <img [src]="logoUrl" alt="" class="productLogo">
+    {{ productLine.name }}
+
+
+    <div *ngFor="let insurer of insurers">
+        <div>
+            <img src="{{baseUrl}}{{ insurer.logo.url}}" alt="" class="companylogo" >
+            
+            {{ insurer.name }}
+            
+
+        </div>
+    </div>
+
+</div>
