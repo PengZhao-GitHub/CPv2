@@ -1,9 +1,44 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px #aaa solid;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(12,16,31,0.4);
+
+}
+
+.container > div{
+    padding: 10px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
 .productLogo {
     width: 50px;
     height: 50px;
     filter: hue-rotate(200deg) ;
     border-radius: 50%;
     border: 1px #aaa solid;
+    box-shadow: 0 2px 2px rgba(12,16,31,0.4);
+}
+
+.description {
+    font-size: 10px;
+}
+
+.insurer {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    font-size: 7px;
+    text-align: center;
+    flex-wrap: wrap ;
 }
 
 .companylogo {
@@ -12,4 +47,5 @@
     opacity: 90%;
     border-radius: 4px;
     border: 1px #aaa solid;
+    box-shadow: 0 2px 2px rgba(12,16,31,0.4);
 }
