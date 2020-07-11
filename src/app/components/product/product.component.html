@@ -1,0 +1,23 @@
+<div class="container">
+    <div>
+        {{ product.product_id}} {{product.name}}
+    </div>
+    <div *ngIf="productDetail">
+        <div>
+            {{ productDetail.productCode}}
+            {{ productDetail.productName }}
+
+        </div>
+        <div *ngFor="let coverage of coverages" class="coverage">
+            <div class="coverageName">
+                {{ coverage.coverageName}}
+            </div>
+            <div class="coverageDetail">
+                <div *ngFor="let option of coverage.limitOption">
+                    {{ option | number }}円
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

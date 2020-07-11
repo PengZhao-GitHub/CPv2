@@ -1,6 +1,6 @@
 <nav class="navbar">
     <span class="open-slide">
-        <a href="#" (click)="openSideMenu()">
+        <a (click)="openSideMenu()">
             <svg width="30" height="30">
                 <path d="M0, 5 30,5" stroke="#fff" stroke-width="5" />
                 <path d="M0, 14 30,14" stroke="#fff" stroke-width="5" />
@@ -18,7 +18,7 @@
 </nav>
 
 <div id="side-menu" class="side-nav">
-    <a href="#" class="btn-close" (click)="closeSideMenu()">&times;</a>
+    <a class="btn-close" (click)="closeSideMenu()">&times;</a>
     <a href="#">Home</a>
     <a href="#">About</a>
     <a href="#">Services</a>
@@ -27,9 +27,9 @@
 
 
 <div id="main">
-    <div class="container">
-        <router-outlet></router-outlet>
-    </div>
+
+    <router-outlet></router-outlet>
+
 
 </div>
 

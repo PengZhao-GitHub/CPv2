@@ -21,14 +21,14 @@
         <br>
         <div class="insurer">
             <div *ngFor="let insurer of insurers">
-                <span>
+                <a [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name]" >
                     <img src="{{baseUrl}}{{ insurer.logo.url}}" alt="" class="companylogo">
+                  
                     <br>
                     {{ insurer.name }}
-                </span>
+                </a>
             </div>
         </div>
-        <br>
     </div>
 
 
