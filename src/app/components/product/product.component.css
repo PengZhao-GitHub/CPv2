@@ -24,3 +24,8 @@
     flex: 1;
     text-align: right;
 }
+
+.quoteInput {
+    border-top: 1px #aaa solid;
+    padding: 8px;
+}
