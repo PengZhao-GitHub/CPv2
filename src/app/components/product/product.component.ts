@@ -60,7 +60,7 @@ export class ProductComponent implements OnInit {
 
     console.log(this.selectedCoverages);
 
-    if (this.selectedCoverages.length > 0) {
+    if (this.selectedCoverages.length >= 0) {
       var customer = {
         sex: this.sex,
         age: this.age
@@ -90,7 +90,7 @@ export class ProductComponent implements OnInit {
 
     console.log(this.selectedCoverages);
 
-    if (this.selectedCoverages.length > 0) {
+    if (this.selectedCoverages.length >= 0) {
       var customer = {
         sex: this.sex,
         age: this.age
