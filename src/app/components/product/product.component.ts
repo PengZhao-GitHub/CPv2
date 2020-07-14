@@ -22,6 +22,9 @@ export class ProductComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    if (this.product.product_id === '003') {
+      this.sex = 'M';
+    }
     this.productService.getProduct(this.product.product_id).subscribe(result => {
       if (result) {
         this.productDetail = result['product'];
@@ -36,6 +39,7 @@ export class ProductComponent implements OnInit {
 
   changeToQuoteMode() {
     this.quoteMode = !this.quoteMode;
+
   }
 
   onSelectCoverage(event) {
