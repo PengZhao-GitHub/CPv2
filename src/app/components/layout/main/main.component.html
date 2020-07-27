@@ -10,7 +10,7 @@
     </span>
 
     <ul class="navbar-nav">
-        <li><a href="#">Home</a></li>
+        <li><a [routerLink]="['/']" (click)="closeSideMenu()">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
@@ -19,7 +19,7 @@
 
 <div id="side-menu" class="side-nav">
     <a class="btn-close" (click)="closeSideMenu()">&times;</a>
-    <a href="#">Home</a>
+    <a [routerLink]="['/']" (click)="closeSideMenu()">Home</a>
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Contact</a>
@@ -30,9 +30,8 @@
 
     <router-outlet></router-outlet>
 
-
 </div>
 
 <div class="footer">
-    hello
+    2020-2220 InsuranceAsService.com 
 </div>

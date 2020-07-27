@@ -9,6 +9,7 @@ body {
     font-family: "Arial", Serif;
     background-color: #f4f4f4;
     overflow-x: hidden;
+    /*overflow-y: hidden;*/
     margin: 0;
     padding: 0;
 }

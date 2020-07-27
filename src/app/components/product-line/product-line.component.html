@@ -8,7 +8,7 @@
     -->
     <div>
         <div class="product">
-            <img [src]="logoUrl" alt="" class="productLogo">&nbsp;
+            <img [src]="logoUrl" alt="" class="productLogo">
             {{ productLine.name }}
 
         </div>
@@ -21,11 +21,11 @@
         <br>
         <div class="insurer">
             <div *ngFor="let insurer of insurers">
-                <a [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name]" >
-                    <img src="{{baseUrl}}{{ insurer.logo.url}}" alt="" class="companylogo">
-                  
-                    <br>
-                    {{ insurer.name }}
+                <a [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name]">
+                    <img src="{{baseUrl}}{{ insurer.logo.url}}" alt="{{ insurer.name }}" class="companylogo">
+
+
+                    <div>{{ insurer.name }}</div>
                 </a>
             </div>
         </div>
