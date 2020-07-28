@@ -1,3 +1,8 @@
+:root {
+    --dev-border: 0px dashed coral;
+    --slide-menu-time: 0.5s;
+}
+
 /* You can add global styles to this file, and also import other style files */
 * {
     box-sizing: border-box;

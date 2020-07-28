@@ -10,28 +10,105 @@
     </span>
 
     <ul class="navbar-nav">
-        <li><a [routerLink]="['/']" (click)="closeSideMenu()">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a [routerLink]="['/']" (click)="closeSideMenu()">保険商品一覧</a></li>
+        <li><a href="#">見積もり</a></li>
+        <li><a href="#">事故のご連絡</a></li>
+        <li><a href="#">サービス</a></li>
     </ul>
+
+    <div class="search">
+        <input class="search-input" type="text" placeholder="">
+        <i class="fas fa-search"></i>
+    </div>
+
+
+    <div class="right-menu">
+
+        <!--<i class="fas fa-search fa-2x"></i>-->
+        <i class="far fa-user-circle"></i>
+
+
+        <i class="fas fa-shopping-cart"></i>
+
+
+    </div>
 </nav>
 
 <div id="side-menu" class="side-nav">
     <a class="btn-close" (click)="closeSideMenu()">&times;</a>
-    <a [routerLink]="['/']" (click)="closeSideMenu()">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <a [routerLink]="['/']" (click)="closeSideMenu()">保険商品一覧</a>
+    <a href="#">リスク・プロファイリング</a>
+    <a href="#">見積もり</a>
+    <a href="#">事故のご連絡</a>
+    <a href="#">サービス</a>
 </div>
 
 
 <div id="main">
 
+    <!-- Main contents -->
     <router-outlet></router-outlet>
 
-</div>
+    <!-- Links -->
+    <div class="links">
+        <div class="links-inner">
+            <ul>
+                <li>
+                    <h3>IASについて</h3>
+                </li>
+                <li><a href="#">採用情報</a></li>
+                <li><a href="#">IASについて</a></li>
+                <li><a href="#">プレスリリース</a></li>
+                <li><a href="#">IASのコミュニティ活動</a></li>
+                <li><a href="#">IAS Global</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>IASでビジネス</h3>
+                </li>
+                <li><a href="#">IASで売る</a></li>
+                <li><a href="#">IAS Pay（決済サービス）</a></li>
+                <li><a href="#">IASで広告掲載をする</a></li>
+                <li><a href="#">›すべてのサービスを見る</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>IASでのお支払い</h3>
+                </li>
+                <li><a href="#">IASポイント</a></li>
+                <li><a href="#">IAS Ali-Pay</a></li>
+                <li><a href="#">パートナーポイントプログラム</a></li>
+                <li><a href="#">›すべての支払い方法を見る</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>ヘルプ</h3>
+                </li>
+                <li><a href="#">IASアシスタント</a></li>
+                <li><a href="#">セキュリティ</a></li>
+                <li><a href="#">ガイド</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
 
-<div class="footer">
-    2020-2220 InsuranceAsService.com 
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="lang"><i class="fas fa-globe fa-2x"></i> 日本語 (日本)</div>
+        <div class="footer-inner">
+            <ul>
+                <li><a href="#">プライバシー規約</a></li>
+                <li><a href="#">利用規約</a></li>
+                <li><a href="#">商標</a></li>
+                <li><a href="#">広告規約</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; InsuranceAsService 2020
+        </div>
+    </footer>
+
+
 </div>
