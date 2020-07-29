@@ -1,19 +1,59 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    border: 1px #aaa solid;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 5px rgba(12,16,31,0.4);
-    padding: 10px;
+    display: inline-block;
+    font-size: 15px;    
+    border: var(--dev-border);
+    width: 100%;
+    margin: 0;
+    padding: 0;    
 }
 
+
+
+.productTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:  left;
+    text-align: left;
+    padding: 10px;
+    color: #fff;
+    background: #00A3E7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 120px;
+}
+
+.productTitle i {
+    margin-right: 10px;
+}
+
+#productName {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#productDescription {
+    font-size: 10px;
+}
+
+.productDetail{
+    width: 100%;
+    border: var(--dev-border);
+}
 .coverage {
     display: flex;
-    border-top: 1px #aaa solid;
+    
     padding: 10px;
     align-items: center;
-    font-size: small;
+    font-size: 12px;
+
+    
+}
+
+.coverage:nth-child(even){
+    background-color: rgba(0, 163, 231,0.1);
 }
 
 .coverageName {
@@ -25,7 +65,14 @@
     text-align: right;
 }
 
-.quoteInput {
-    border-top: 1px #aaa solid;
-    padding: 8px;
+
+.quoteBtn {
+    padding-top: 1px;
+}
+
+.quoteBtn a {
+    color: #fff;
+    box-shadow: 2px 2px 3px rgba(0, 163, 231,0.4);
+    border-radius: 6px;
+
 }

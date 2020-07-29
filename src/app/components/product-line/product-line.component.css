@@ -1,11 +1,13 @@
 
 .container {
+    border: var(--dev-border);
     /*border: 1px #aaa solid;*/
     /*border-radius: 10px;
     box-shadow: 0 5px 5px rgba(12,16,31,0.4);
     */
     margin-bottom: 20px;
     color: black;
+    padding: 0;
 }
 
 

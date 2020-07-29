@@ -15,6 +15,9 @@ export class ProductsComponent implements OnInit {
   selectedProductLine: string;
   selectedProductLineID: string;
 
+  showcases: any[];
+  baseUrl:string = "http://localhost:1337"
+
   constructor(
     private productLineService: ProductLinesService,
     private route: ActivatedRoute) { }
@@ -37,6 +40,12 @@ export class ProductsComponent implements OnInit {
 
 
     });
+
+    this.productLineService.getShowcases().subscribe(showcases => {
+      this.showcases = showcases;
+      console.log(this.showcases);
+      console.log(this.showcases[0].Content[0].url);
+    })
 
   }
 

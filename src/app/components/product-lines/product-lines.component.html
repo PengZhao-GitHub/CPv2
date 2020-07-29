@@ -1,11 +1,15 @@
 <div class="showcase">
     <div id="slider">
-        <figure id="images">
-            <img src="assets/img/desk.png" alt="">
-            <img src="assets/img/desk2.png" alt="">
-            <img src="assets/img/desk.png" alt="">
-            <img src="assets/img/desk3.png" alt="">
-            <img src="assets/img/desk.png" alt="">
+        <figure id="images" >
+            <!-- 
+               <img src="assets/img/desk.png" alt="">
+                <img src="assets/img/desk2.png" alt="">
+                <img src="assets/img/desk.png" alt="">
+                <img src="assets/img/desk3.png" alt=""> 
+                <img src="assets/img/desk.png" alt=""> 
+            -->
+            <img *ngFor="let showcase of showcases" src="{{baseUrl}}{{showcase.Content[0].url}}" alt="">
+            
         </figure>
     </div>
 </div>

@@ -15,14 +15,14 @@ export class MainComponent implements OnInit {
 
   openSideMenu() {
     console.log("clicked");
-    document.getElementById('side-menu').style.width = '250px';
-    document.getElementById('main').style.marginLeft = '250px';
+    document.getElementById('cp-side-menu').style.width = '250px';
+    document.getElementById('cp-main').style.marginLeft = '250px';
     //document.getElementById('main').style.width = 'calc(100% - 250px)';
   }
 
   closeSideMenu() {
-    document.getElementById('side-menu').style.width = '0px';
-    document.getElementById('main').style.marginLeft = '0px';
+    document.getElementById('cp-side-menu').style.width = '0px';
+    document.getElementById('cp-main').style.marginLeft = '0px';
     //document.getElementById('main').style.width = '100%';
   }
 

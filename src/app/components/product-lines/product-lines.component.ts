@@ -9,6 +9,9 @@ import { ProductLinesService } from 'src/app/services/product-lines.service';
 export class ProductLinesComponent implements OnInit {
 
   productLines: any[];
+  showcases: any[];
+
+  baseUrl:string = "http://localhost:1337"
 
   constructor(private productLineService: ProductLinesService) { }
 
@@ -18,6 +21,12 @@ export class ProductLinesComponent implements OnInit {
       this.productLines = productLines;
       console.log(this.productLines);
 
+    });
+
+    this.productLineService.getShowcases().subscribe(showcases => {
+      this.showcases = showcases;
+      console.log(this.showcases);
+      console.log(this.showcases[0].Content[0].url);
     })
   }
 

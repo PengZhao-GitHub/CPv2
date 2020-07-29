@@ -1,4 +1,26 @@
 <div class="container">
+    <div class="productTitle">
+        <div id="productName"> <i class="fas fa-user-md"></i>{{product.name}}</div>
+        <div id="productDescription">{{product.description}}</div>
+
+    </div>
+    <div class="quoteBtn">
+        <a class="btn btn-warning btn-block btn-sm" href="#" role="button">まずは見積りトライ！</a>
+    </div>
+    <div *ngIf="productDetail" class="productDetail">
+        <div *ngFor="let coverage of coverages" class="coverage">
+            <div class="coverageName">
+                {{ coverage.coverageName}}
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--
+
+<div class="container">
     <div>
         Marketing Product Name: {{ product.product_id}} {{product.name}}
     </div>
@@ -53,27 +75,30 @@
                         </div>
 
                         <div class="coverageDetail">
-                            <!--
+               
                         <select name="" id="">
                             <option *ngFor="let option of coverage.limitOption" value="option">{{ option | number }}円</option>
                         </select>
-                        -->
-                            <form id="{{coverage.coverageCode}}">
-                                <div *ngFor="let option of coverage.limitOption">
-                                    <input type="radio" name="{{ coverage.coverageCode }}" value="{{ option }}"
-                                        checked="checked" (change)="onSelectOption($event)">
-                                    {{ option | number }}円
-                                </div>
+                  
+                        <form id="{{coverage.coverageCode}}">
+                            <div *ngFor="let option of coverage.limitOption">
+                                <input type="radio" name="{{ coverage.coverageCode }}" value="{{ option }}"
+                                    checked="checked" (change)="onSelectOption($event)">
+                                {{ option | number }}円
+                            </div>
 
-                            </form>
+                        </form>
 
-                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
-
     </div>
+
+
 </div>
+</div>
+
+
+-->
