@@ -11,6 +11,7 @@ export class ProductLineComponent implements OnInit {
 
   baseUrl:string = "http://localhost:1337"
   logoUrl:string;
+  companyLogoUrl: string;
 
   insurers: [];
 
@@ -21,7 +22,6 @@ export class ProductLineComponent implements OnInit {
     this.logoUrl = `${this.baseUrl}${this.productLine.logo.url}`;
     console.log(this.logoUrl);
     this.insurers = this.productLine.insurers;
-    
   }
 
 }

@@ -1,3 +1,5 @@
+
+
 <nav class="cp-navbar">
     <span class="cp-open-slide">
         <a (click)="openSideMenu()">
@@ -18,7 +20,7 @@
 
     <div class="cp-search">
         <input class="cp-search-input" type="text" placeholder="">
-        <i class="fas fa-search"></i>
+        <i class="fas fa-search" (click)="search()"></i>
     </div>
 
 
@@ -48,8 +50,12 @@
 
 <div id="cp-main">
 
+
     <!-- Main contents -->
-    <router-outlet></router-outlet>
+    <router-outlet ></router-outlet>
+
+    <!-- Go back to top -->
+    <a class="gotop" (click)="goToTop()"><i class="fas fa-chevron-up fa-2x"></i></a>
 
     <!-- Links -->
     <div class="links">

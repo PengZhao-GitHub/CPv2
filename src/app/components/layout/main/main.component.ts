@@ -26,4 +26,15 @@ export class MainComponent implements OnInit {
     //document.getElementById('main').style.width = '100%';
   }
 
+  goToTop() {
+    window.scroll(0,0);
+  }
+
+  search() {
+    //document.querySelector('cp-search-input').style.visibility = '';
+    //window.alert('hello');
+    console.log(document.getElementsByClassName('cp-search-input')[0].value);
+    //document.getElementsByClassName('cp-search-input')[0].style.visibility = 'hidden';
+  }
+
 }

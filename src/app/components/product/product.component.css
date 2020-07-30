@@ -42,6 +42,7 @@
     width: 100%;
     border: var(--dev-border);
 }
+
 .coverage {
     display: flex;
     
@@ -60,10 +61,13 @@
     flex: 1;
 }
 
+/*
 .coverageDetail {
+    display: none;
     flex: 1;
     text-align: right;
 }
+*/
 
 
 .quoteBtn {
@@ -76,3 +80,53 @@
     border-radius: 6px;
 
 }
+
+/*  Tool tip */
+.notetip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+    align-items: center;
+
+    border: var(--dev-border);
+  }
+  
+  /* Tooltip text */
+  .notetip .notetext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    padding: 5px 20px 5px 20px;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .notetip:hover .notetext {
+    visibility: visible;
+  }
+
+  /* Arrow */
+ 
+  .notetip-right {
+    top: -5px;
+    left: calc(100% + 10px);  
+  }
+
+
+  .notetip-right::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #555 transparent transparent;
+  }
+

@@ -178,10 +178,12 @@ a {
 
 #cp-main{
     transition: margin-left var(--slide-menu-time);
+    
     position: absolute;
     top: 60px;    
     width: 100%;
     background: #fff;
+
 }
 
 /*
@@ -199,13 +201,29 @@ a {
 }
 */
 
+/* go back to top */
+.gotop {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(0, 163, 231,0.1);
+    color: #00A3E7;
+}
+
+.gotop:hover {
+    background-color: rgba(0, 163, 231,0.5);;
+    color: #fff;
+    cursor: pointer;
+}
+
 /* Links */
 .links {
     background: #f2f2f2;
     color: #616161;
     font-size: 12px;
     padding: 20px 0; 
-    border-top: 1px solid  #fff;
 }
 
 .links-inner {
@@ -266,8 +284,7 @@ a {
 
 .lang:hover {
     cursor: pointer;
-    border: 1px dashed coral;
-    
+    border: var(--dev-border);
 }
 
 .footer-inner {

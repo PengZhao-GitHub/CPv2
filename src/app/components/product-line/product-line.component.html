@@ -21,7 +21,7 @@
         <br>
         <div class="insurer">
             <div *ngFor="let insurer of insurers">
-                <a [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name]">
+                <a [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name, baseUrl+insurer.logo.url]">
                     <img src="{{baseUrl}}{{ insurer.logo.url}}" alt="{{ insurer.name }}" class="companylogo">
 
 

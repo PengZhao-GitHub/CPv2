@@ -24,7 +24,7 @@ export class ProductLinesComponent implements OnInit {
     });
 
     this.productLineService.getShowcases().subscribe(showcases => {
-      this.showcases = showcases;
+      this.showcases = showcases.filter(item => item.UsageType === 'ProductLines');
       console.log(this.showcases);
       console.log(this.showcases[0].Content[0].url);
     })

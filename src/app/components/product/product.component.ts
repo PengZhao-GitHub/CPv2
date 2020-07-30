@@ -19,22 +19,30 @@ export class ProductComponent implements OnInit {
   selectedCoverages = [];
   premium;
 
-  constructor(private productService: ProductService) { }
+
+  constructor(private productService: ProductService) { 
+      //console.log('contructor:', this.product.url);
+      //this.videoUrl = sanitizer.bypassSecurityTrustResourceUrl(this.product.url);
+  }
 
   ngOnInit() {
+    
     if (this.product.product_id === '003') {
       this.sex = 'M';
     }
     this.productService.getProduct(this.product.product_id).subscribe(result => {
       if (result) {
         this.productDetail = result['product'];
-        console.log('productDetail', this.productDetail);
+        //console.log('productDetail', this.productDetail);
         this.coverages = this.productDetail['coverages'];
       } else {
         this.productDetail = null;
       }
 
     })
+
+    window.scroll(0, 0);
+
   }
 
   changeToQuoteMode() {
@@ -107,4 +115,25 @@ export class ProductComponent implements OnInit {
 
 
   }
+
+  // When the user clicks on the button, open the modal
+  openMovie(url) {
+    
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    
+    var iframe = document.getElementsByTagName('iframe')[0];
+    iframe.setAttribute('src', url);
+    console.log(iframe);
+
+
+  }
+
+  /*
+  closeMovie(){
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+  */
+
 }

@@ -1,7 +1,8 @@
 <div class="container">
     <div class="productTitle">
-        <div id="productName"> <i class="fas fa-user-md"></i>{{product.name}}</div>
-        <div id="productDescription">{{product.description}}</div>
+        <div id="productName"> <i class="fas fa-play-circle" (click)="openMovie(product.url)" id="myBtn"></i>{{product.name}}
+        </div>
+        <div id="productDescription">{{product.description}} </div>
 
     </div>
     <div class="quoteBtn">
@@ -10,13 +11,36 @@
     <div *ngIf="productDetail" class="productDetail">
         <div *ngFor="let coverage of coverages" class="coverage">
             <div class="coverageName">
-                {{ coverage.coverageName}}
+                <div class="notetip">{{ coverage.coverageName}}
+                    <span class="notetext notetip-right">
+                        <div>保険金：</div>
+                        <div *ngFor="let option of coverage.limitOption">
+                            {{ option | number }}円
+                        </div>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 
-
 </div>
+
+<!-- The Modal -->
+<!--
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" (click)="closeMovie()">&times;</span>
+        <div class="movie">
+            <iframe id="introduction" src="" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+-->
+
+
 
 <!--
 
