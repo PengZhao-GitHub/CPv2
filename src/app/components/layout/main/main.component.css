@@ -9,6 +9,8 @@ a {
     color: #000;
  }
 
+ /*  Menu bar setting */
+ /*********************/
 
 .cp-navbar {
     background-color: #3b5998;
@@ -23,6 +25,7 @@ a {
     justify-content: space-between;
     border: var(--dev-border);
 
+    margin: 0;
 
 }
 
@@ -176,13 +179,17 @@ a {
     margin-right: 10px;
 }
 
+/* Main display area setting */
 #cp-main{
     transition: margin-left var(--slide-menu-time);
-    
+
     position: absolute;
     top: 60px;    
     width: 100%;
     background: #fff;
+
+    margin: 0;
+    border: var(--dev-border);
 
 }
 
@@ -202,14 +209,18 @@ a {
 */
 
 /* go back to top */
+/******************/
 .gotop {
     padding: 10px;
     display: inline-block;
     width: 100%;
     text-align: center;
-    margin: 0;
+
     background-color: rgba(0, 163, 231,0.1);
     color: #00A3E7;
+
+    margin: 0;
+    border: var(--dev-border);
 }
 
 .gotop:hover {
@@ -219,11 +230,15 @@ a {
 }
 
 /* Links */
+/********************/
 .links {
     background: #f2f2f2;
     color: #616161;
     font-size: 12px;
     padding: 20px 0; 
+
+    margin: 0;
+    border: var(--dev-border);
 }
 
 .links-inner {
@@ -255,6 +270,7 @@ a {
 }
 
 /* Footer */
+/**************************/
 .main-footer {
     background: #3b5998;
     color: #fff;
@@ -262,9 +278,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 
+    margin: 0;
+    border: var(--dev-border);
 }
+
 
 .main-footer  div {
     display: flex;
@@ -275,6 +293,7 @@ a {
 .lang {
     padding-top: 20px;
     padding: 20px;
+    border: var(--dev-border);
 }
 
 .lang i {
@@ -284,7 +303,6 @@ a {
 
 .lang:hover {
     cursor: pointer;
-    border: var(--dev-border);
 }
 
 .footer-inner {
@@ -318,6 +336,7 @@ a {
 
 
 /* Hide menu */
+/*****************************/
 
 @media(max-width:730px){
     .cp-navbar-nav{

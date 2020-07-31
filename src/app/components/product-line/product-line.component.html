@@ -12,13 +12,11 @@
             {{ productLine.name }}
 
         </div>
-        <br>
 
         <div class="description">
             {{ productLine.description }}
         </div>
-
-        <br>
+        
         <div class="insurer">
             <div *ngFor="let insurer of insurers">
                 <a [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name, baseUrl+insurer.logo.url]">

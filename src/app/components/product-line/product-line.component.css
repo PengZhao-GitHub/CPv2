@@ -38,9 +38,14 @@
 
 .description {
     font-size: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 40px;
+    padding: 10px;
+    height: 60px;
+
+    /*border-top: 1px solid #fff;*/
+    border-bottom: 3px solid #fff;
+    
+    color: #fff;
+    background-color: #00A3E7;
 }
 
 .insurer {

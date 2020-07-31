@@ -10,7 +10,7 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    
   }
 
   openSideMenu() {
@@ -33,7 +33,7 @@ export class MainComponent implements OnInit {
   search() {
     //document.querySelector('cp-search-input').style.visibility = '';
     //window.alert('hello');
-    console.log(document.getElementsByClassName('cp-search-input')[0].value);
+    //console.log(document.getElementsByClassName('cp-search-input')[0].value);
     //document.getElementsByClassName('cp-search-input')[0].style.visibility = 'hidden';
   }
 

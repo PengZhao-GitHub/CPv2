@@ -1,5 +1,5 @@
 :root {
-    --dev-border: 0px dashed coral;
+    --dev-border: opx dashed coral;
     --slide-menu-time: 0.2s;
 }
 
@@ -14,7 +14,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* smooth scroll to top */
 }
 
 
@@ -25,4 +25,5 @@ body {
     /*overflow-y: hidden;*/
     margin: 0;
     padding: 0;
+    
 }

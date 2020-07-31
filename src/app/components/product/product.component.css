@@ -5,6 +5,8 @@
     width: 100%;
     margin: 0;
     padding: 0;    
+
+    border: var(--dev-border);
 }
 
 
@@ -21,10 +23,13 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     height: 120px;
+
+    border: var(--dev-border);
 }
 
 .productTitle i {
     margin-right: 10px;
+    border: var(--dev-border);
 }
 
 #productName {
@@ -32,10 +37,14 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+
+    border: var(--dev-border);
 }
 
 #productDescription {
     font-size: 10px;
+
+    border: var(--dev-border);
 }
 
 .productDetail{

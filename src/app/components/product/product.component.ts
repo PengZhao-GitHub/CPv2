@@ -13,11 +13,14 @@ export class ProductComponent implements OnInit {
 
   productDetail = {};
   coverages = [];
+
+  /*
   quoteMode = false;
   sex = 'F';
   age = 0;
   selectedCoverages = [];
   premium;
+  */
 
 
   constructor(private productService: ProductService) { 
@@ -27,9 +30,12 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     
-    if (this.product.product_id === '003') {
+    /*
+      if (this.product.product_id === '003') {
       this.sex = 'M';
     }
+    */
+
     this.productService.getProduct(this.product.product_id).subscribe(result => {
       if (result) {
         this.productDetail = result['product'];
@@ -41,15 +47,18 @@ export class ProductComponent implements OnInit {
 
     })
 
-    window.scroll(0, 0);
+    window.scroll(0, 0);  //Go to the top of page
 
   }
 
+  /*
   changeToQuoteMode() {
     this.quoteMode = !this.quoteMode;
 
   }
+  */
 
+  /*
   onSelectCoverage(event) {
     console.log(event.target.value);
     console.log(event.target.checked);
@@ -84,7 +93,10 @@ export class ProductComponent implements OnInit {
       });
     }
   }
+  */
 
+
+  /*
   onSelectOption(event) {
     console.log(event.target.value);
     console.log(event.target.checked);
@@ -112,24 +124,23 @@ export class ProductComponent implements OnInit {
         this.premium = quote['result'].totalPremium;
       });
     }
-
-
   }
+  */
 
   // When the user clicks on the button, open the modal
   openMovie(url) {
     
     var modal = document.getElementById("myModal");
-    modal.style.display = "block";
+    modal.style.display = "flex"; //block
     
     var iframe = document.getElementsByTagName('iframe')[0];
-    iframe.setAttribute('src', url);
+    iframe.setAttribute('src', url);  //Assign the ad movie URL to the iframe
     console.log(iframe);
 
 
   }
 
-  /*
+  /* Moved this to Products component. this is a pair of the openMovie()
   closeMovie(){
     var modal = document.getElementById("myModal");
     modal.style.display = "none";

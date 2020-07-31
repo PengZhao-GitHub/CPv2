@@ -31,7 +31,7 @@ export class ProductsComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.selectedInsurerID = params.get('companyid');
       this.selectedInsurer = params.get('companyname');
-      this.selectedProductLine = params.get('productlineid');
+      this.selectedProductLineID = params.get('productlineid');
       this.selectedProductLine = params.get('productlinename');
       this.selectedInsurerUrl = params.get('url');
     });
@@ -45,6 +45,7 @@ export class ProductsComponent implements OnInit {
 
     });
 
+    /* Get showcase slides from CMS */
     this.productLineService.getShowcases().subscribe(showcases => {
       this.showcases = showcases.filter(item => item.UsageType === 'Products');
       console.log(this.showcases);
@@ -55,6 +56,7 @@ export class ProductsComponent implements OnInit {
 
   }
 
+  /* Close the shared product movie iframe */
   closeMovie(){
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
