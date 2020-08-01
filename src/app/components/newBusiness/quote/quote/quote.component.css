@@ -1,0 +1,202 @@
+pre {
+    display: none;
+}
+
+
+.quoteHeder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00A3E7;;
+    margin-bottom: 20px;
+    border: var(--dev-border);
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+}
+
+.quoteHeder .back {
+    text-align: left;
+    width: 40px;
+    border: var(--dev-border);
+    padding-left: 10px;
+    color: #fff;
+}
+
+.quoteHeder .forward {
+    text-align: right;
+    padding-right: 10px;
+    width: 40px;
+    border: var(--dev-border);
+    color: #fff;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+
+    font-size: 14px;
+
+    border: var(--dev-border);
+}
+
+.title div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.companyLogo {
+    height: 35px;
+    
+    border-radius: 10px;
+}
+
+.title div {
+    color: #02075d;
+}
+
+.insuredObject {
+    border: var(--dev-border);
+    width: 100%;
+    text-align: left;
+}
+
+.risks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;    
+    border: var(--dev-border);
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;    
+
+    position: relative;
+    top: 60px;  
+
+    margin-bottom: 60px;  /* fix 60px gaps */
+
+
+}
+
+.productDetail{
+    width: 100%;
+    border: var(--dev-border);
+
+}
+
+.coverage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+
+    font-size: 12px;
+    border: var(--dev-border);
+    width: 100%;
+
+    
+}
+
+
+.coverageHeader {
+    text-align: left;
+    border: var(--dev-border);
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+}
+
+.coverageHeader .coverageName {
+    padding-left: 10px;
+}
+
+.coverageDetail {
+    width: 80%;
+    border: var(--dev-border);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.limitOption {
+    border: var(--dev-border);
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.limitOption .limit {
+    padding-left: 5px;
+    padding-top: 2px;
+}
+
+
+/*  Tool tip */
+.notetip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+    align-items: center;
+
+    border: var(--dev-border);
+  }
+  
+  /* Tooltip text */
+  .notetip .notetext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    padding: 5px 20px 5px 20px;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .notetip:hover .notetext {
+    visibility: visible;
+  }
+
+  /* Arrow */
+ 
+  .notetip-right {
+    top: -5px;
+    left: calc(100% + 10px);  
+  }
+
+
+  .notetip-right::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #555 transparent transparent;
+  }
+

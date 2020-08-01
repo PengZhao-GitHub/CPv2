@@ -6,7 +6,7 @@
 
     </div>
     <div class="quoteBtn">
-        <a class="btn btn-warning btn-block btn-sm" href="#" role="button">まずは見積りトライ！</a>
+        <a class="btn btn-warning btn-block btn-sm" role="button" (click)="getQuote()">まずは見積りトライ！</a>
     </div>
     <div *ngIf="productDetail" class="productDetail">
         <div *ngFor="let coverage of coverages" class="coverage">
@@ -22,7 +22,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <!-- The Modal -->

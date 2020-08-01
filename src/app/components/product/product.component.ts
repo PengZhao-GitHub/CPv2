@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { FormGroup } from '@angular/forms';
+import { Router, ROUTER_INITIALIZER } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -14,6 +15,8 @@ export class ProductComponent implements OnInit {
   productDetail = {};
   coverages = [];
 
+  quoteParam = {};
+
   /*
   quoteMode = false;
   sex = 'F';
@@ -23,9 +26,9 @@ export class ProductComponent implements OnInit {
   */
 
 
-  constructor(private productService: ProductService) { 
-      //console.log('contructor:', this.product.url);
-      //this.videoUrl = sanitizer.bypassSecurityTrustResourceUrl(this.product.url);
+  constructor(private productService: ProductService,
+    private router: Router) { 
+   
   }
 
   ngOnInit() {
@@ -36,6 +39,7 @@ export class ProductComponent implements OnInit {
     }
     */
 
+    /*
     this.productService.getProduct(this.product.product_id).subscribe(result => {
       if (result) {
         this.productDetail = result['product'];
@@ -44,8 +48,15 @@ export class ProductComponent implements OnInit {
       } else {
         this.productDetail = null;
       }
-
     })
+    */
+
+    console.log(this.product['product_spec']);
+    this.productDetail = this.product['product_spec'];
+    this.coverages = this.productDetail['coverages'];
+    
+
+    
 
     window.scroll(0, 0);  //Go to the top of page
 
@@ -146,5 +157,12 @@ export class ProductComponent implements OnInit {
     modal.style.display = "none";
   }
   */
+
+  getQuote() {
+    /*this.router.navigate(['/quote', this.product]);*/
+    console.log("getQuote:", {state: this.product});
+    this.router.navigate(['/quote'], {state: this.product});  /* Sate Management */
+    /*this.router.navigateByUrl('/quote', {state: this.product}); */
+  }
 
 }

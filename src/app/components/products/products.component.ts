@@ -23,12 +23,11 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private productLineService: ProductLinesService,
-    private route: ActivatedRoute) { }
+    private routeParam: ActivatedRoute) { }
 
   ngOnInit() {
 
-
-    this.route.paramMap.subscribe(params => {
+    this.routeParam.paramMap.subscribe(params => {
       this.selectedInsurerID = params.get('companyid');
       this.selectedInsurer = params.get('companyname');
       this.selectedProductLineID = params.get('productlineid');
@@ -54,6 +53,7 @@ export class ProductsComponent implements OnInit {
       console.log(this.showcaseVideo);
     })
 
+    window.scroll(0,0);
   }
 
   /* Close the shared product movie iframe */

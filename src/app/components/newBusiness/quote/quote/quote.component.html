@@ -1,0 +1,45 @@
+<pre>{{ state$ | async | json }} </pre>
+<div class="quoteHeder">
+    <div class="back">
+        <!--<a  [routerLink]="['/products/', selectedInsurerID , selectedInsurer, selectedProductLineID , selectedProductLine , selectedInsurerUrl ]">-->
+        <a (click)="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <div class="forward"><i class="fas fa-arrow-right"></i></div>
+</div>
+
+
+
+<div class="risks">
+    <div class="title">
+        <div>
+            <img class="companyLogo" src="{{selectedInsurerUrl}}" alt="">
+            <!-- <div>{{ selectedInsurer }} </div> -->
+            <div>{{ selectedProductLine }}</div>
+        </div>
+
+        <div>{{selectedProduct}}</div>
+    </div>
+    <div class="insuredObject">
+        Insured object
+    </div>
+    <div *ngIf="productDetail" class="productDetail">
+        <div *ngFor="let coverage of coverages" class="coverage">
+            <div class="coverageHeader">
+                <input type="checkbox" name="{{ coverage.coverageName }}" id="{{ coverage.coverageName }}"
+                    value="{{ coverage.coverageCode }}" (change)="onSelectCoverage($event)">
+                <div class="coverageName">{{ coverage.coverageName}}</div>
+            </div>
+            <div class="coverageDetail">
+                <div *ngFor="let option of coverage.limitOption" class="limitOption">
+                    <input type="radio" name="{{ coverage.coverageCode }}" value="{{ option }}" checked="checked"
+                        (change)="onSelectOption($event)">
+                    <div class="limit">{{ option | number }}円</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

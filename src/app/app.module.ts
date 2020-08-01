@@ -9,7 +9,8 @@ import { ProductLineComponent } from './components/product-line/product-line.com
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { QuoteComponent } from './components/newBusiness/quote/quote/quote.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms'
     ProductLinesComponent,
     ProductLineComponent,
     ProductsComponent,
-    ProductComponent
+    ProductComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,
