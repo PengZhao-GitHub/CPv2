@@ -82,12 +82,14 @@
     margin-bottom: 20px;
 
     border: var(--dev-border);
+
+    font-size: var(--title-font-size);
 }
 
 .companyLogo {
     height: 35px;
     
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 .title div {

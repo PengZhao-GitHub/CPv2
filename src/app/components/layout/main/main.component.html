@@ -27,10 +27,8 @@
     <div class="cp-right-menu">
 
         <!--<i class="fas fa-search fa-2x"></i>-->
-        <i class="far fa-user-circle"></i>
-
-
-        <i class="fas fa-shopping-cart"></i>
+        <i class="far fa-user-circle fa-lg"></i>
+        <i class="fas fa-shopping-cart fa-lg"></i>
 
 
     </div>
@@ -55,10 +53,10 @@
     <router-outlet ></router-outlet>
 
     <!-- Go back to top -->
-    <a class="gotop" (click)="goToTop()"><i class="fas fa-chevron-up fa-2x"></i></a>
+    <a class="gotop" id="gotop" (click)="goToTop()"><i class="fas fa-chevron-up fa-2x"></i></a>
 
     <!-- Links -->
-    <div class="links">
+    <div class="links" id="main-links">
         <div class="links-inner">
             <ul>
                 <li>
@@ -103,7 +101,7 @@
 
 
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer" id="main-footer">
         <div class="lang"><i class="fas fa-globe fa-2x"></i> 日本語 (日本)</div>
         <div class="footer-inner">
             <ul>
