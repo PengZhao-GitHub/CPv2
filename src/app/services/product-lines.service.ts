@@ -19,6 +19,8 @@ export class ProductLinesService {
   productLines:string = '/product-lines';
   products:string = '/products';
   showcases:string = '/showcases';
+  coverages:string = '/coverages';
+
   //productLinesUrl:string = 'http://localhost:1337/product-lines';
 
   constructor(private http: HttpClient) { }
@@ -39,4 +41,14 @@ export class ProductLinesService {
     return this.http.get<any[]>(`${this.baseUrl}${this.showcases}`);
   }
 
+  getCoverges():Observable<any[]>{
+    console.log('getCoverages');
+    return this.http.get<any[]>(`${this.baseUrl}${this.coverages}`);
+  }
+
+  getCoverge(id):Observable<any[]>{
+    console.log('getCoverage:', id);
+    return this.http.get<any>(`${this.baseUrl}${this.coverages}/${id}`);
+  }
+  
 }

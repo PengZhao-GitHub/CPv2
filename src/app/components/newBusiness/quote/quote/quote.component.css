@@ -71,6 +71,28 @@ pre {
     color: #fff;
 }
 
+
+
+.risks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;    
+    border: var(--dev-border);
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    padding: 0;    
+
+    position: relative;  
+    top: 60px;
+
+     margin-bottom: 60px;  /*fix 60px gaps */
+
+
+}
+
 .insuredObject {
     border: var(--dev-border);
     width: 100%;
@@ -140,25 +162,6 @@ pre {
 
 
 
-.risks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;    
-    border: var(--dev-border);
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0;    
-
-    position: relative;  
-    top: 60px;
-
-     margin-bottom: 60px;  /*fix 60px gaps */
-
-
-}
 
 .productDetail{
     width: 100%;
@@ -194,7 +197,7 @@ pre {
     padding-top: 5px;
     padding-bottom: 5px;
 
-    background-color: rgba(0, 163, 231,0.3);
+    background-color:  #f2f2f2; /*rgba(0, 163, 231,0.1);*/
 
     display: flex;
     align-items: center;
@@ -207,10 +210,15 @@ pre {
 
 }
 
-.coverageHeader .coverageName {
+.coverageName {
     padding-left: 10px;
     font-size: 14px;
     
+    
+}
+
+.openHelpIcon:hover {
+    color: red;
     
 }
 
@@ -265,55 +273,6 @@ pre {
 }
 
 
-/*  Tool tip */
-.notetip {
-    position: relative;
-    display: inline-block;
-    /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
-    align-items: center;
-
-    border: var(--dev-border);
-  }
-  
-  /* Tooltip text */
-  .notetip .notetext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: left;
-    padding: 5px 20px 5px 20px;
-    border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .notetip:hover .notetext {
-    visibility: visible;
-  }
-
-  /* Arrow */
- 
-  .notetip-right {
-    top: -5px;
-    left: calc(100% + 10px);  
-  }
-
-
-  .notetip-right::after {
-      content: "";
-      position: absolute;
-      top: 12px;
-      right: 100%;
-      margin-top: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent #555 transparent transparent;
-  }
-
 
 
   .quoteHeder {
@@ -350,6 +309,7 @@ pre {
 #premiumResult {
     font-size: 18px;
     font-weight: bold;
+    
 }
 
 .premium a {
@@ -362,13 +322,217 @@ pre {
 }
 
 
-@media(max-width:480px){
+
+/* The Modal (background) */
+.modal {
+    display: flex none; /* Hidden by default */
+    position: fixed; /* absolute-Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top:  0; /*-200px;*/
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* auto - Enable scroll if needed */
+    /* background-color: rgb(0,0,0); Fallback color */
+    background: rgba(0,0,0,0.8); /* Black w/ opacity */
+
+    align-items: center;
+    justify-content: space-around;
+
+    border: var(--dev-border);
+    
+  }
+
+/* Modal Content/Box */ 
+.modal-content {
+
+    background-color: #f2f2f2;    /* #fefefe; */
+     /*margin: auto; 15% from the top and centered */
+    padding: 0;
+    margin: 0;
+    /*border: 1px solid #888;*/
+    width: 90%; /* Could be more or less, depending on screen size */
+    height:  calc(100vh * 0.7);
+
+    border-radius: 4px;
+    overflow: hidden;
+
+    border: var(--dev-border);
+
+}  
+
+/* The Close Button */
+.cp-close {
+    position: absolute; 
+    top: 5px;
+    right: 10px;
+    color: #FF605C;;
+    float: right;
+    font-size: 20px;
+    /*font-weight: bold;*/
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #FF605C;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    /*margin: 5px;*/
+
+    padding-top: 1px;
+    padding-left: 0px;
+
+    border: var(--dev-border);
+}
+
+  
+.cp-close:hover,
+.cp-close:focus {
+    color: #fff;/*rgb(179, 179, 179);*/
+    cursor: pointer;
+
+  
+}
+
+.helpFrame {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: var(--dev-border);
+    width:100%;
+    height:100%;
+    /*margin: 10px auto;*/
+    border-radius: 4px;
+    
+    padding-top: 25px;    
+    
+}
+
+.helpText {
+    border: var(--dev-border);
+    width:100%;
+    height:100%;
+    background: #fff;
+    
+    padding: 20px;
+
+    
+}
+
+/* End of Modal Content/Box */ 
+
+
+/*  Tool tip */
+/**************************************************/
+.notetip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+    align-items: center;
+
+    border: var(--dev-border);
+  }
+  
+  /* Tooltip text */
+  .notetip .notetext {
+    visibility: hidden;
+    width: 120px; /*120px;*/
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .notetip:hover .notetext {
+    visibility: visible;
+  }
+
+  /* Arrow */
+  .notetip-right {
+    top: -5px;
+    left: calc(100% + 10px);  
+  }
+
+
+  .notetip-right::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #555 transparent transparent;
+  }
+
+
+  .notetip-bottom {
+    top: 135%;
+    left: 50%;  
+    margin-left: -60px;
+  }
+  
+  
+  .notetip-bottom::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #555 transparent;
+  }
+
+  /**************************************************/
+  /* End of  tip*/
+
+
+
+
+
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    
+}
+    
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    
+}
+    
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    .coverageDetail {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+}
+
+/*
+@media(max-width:485px){
 
     .coverageDetail {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        
-    
     }
 }
+*/
+
+

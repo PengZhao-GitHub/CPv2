@@ -161,6 +161,8 @@ export class ProductComponent implements OnInit {
   getQuote() {
     /*this.router.navigate(['/quote', this.product]);*/
     console.log("getQuote:", {state: this.product});
+    localStorage.setItem('state', this.product);  //This does not work, as the object will be transfered to a string with "[object Object]"
+
     this.router.navigate(['/quote'], {state: this.product});  /* Sate Management */
     /*this.router.navigateByUrl('/quote', {state: this.product}); */
   }

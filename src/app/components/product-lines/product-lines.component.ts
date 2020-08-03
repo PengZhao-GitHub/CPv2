@@ -27,7 +27,10 @@ export class ProductLinesComponent implements OnInit {
       this.showcases = showcases.filter(item => item.UsageType === 'ProductLines');
       console.log(this.showcases);
       console.log(this.showcases[0].Content[0].url);
-    })
+    });
+
+    window.scroll(0,0);
+
   }
 
 }

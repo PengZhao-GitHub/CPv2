@@ -72,7 +72,7 @@
 .title {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
 
     padding: 10px 0px 10px 0px;
@@ -92,10 +92,32 @@
     border-radius: 4px;
 }
 
-.title div {
-    color: #02075d;
+.title .back {
+    text-align: left;
+    width: 40px;
+    border: var(--dev-border);
+    padding-left: 10px;
+    color: #fff;
 }
 
+.title .forward {
+    text-align: right;
+    padding-right: 10px;
+    width: 40px;
+    border: var(--dev-border);
+    color: #fff;
+
+    visibility: hidden;
+
+    
+}
+
+.title div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
 /*  Movie windows  */
 /********************************************************************/
 
