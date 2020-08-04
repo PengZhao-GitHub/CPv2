@@ -249,7 +249,7 @@ export class QuoteComponent implements OnInit {
         //Define the function to update premium by defined speed
         const updateCount = () => {
           const target = counter;
-          const inc = counter / speed;
+          const inc = Math.ceil(counter / speed);
           if (this.premium < counter ) {
             this.premium = this.premium + inc;
             //Set timeer to show the animation effect
