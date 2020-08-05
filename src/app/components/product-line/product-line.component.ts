@@ -22,6 +22,20 @@ export class ProductLineComponent implements OnInit {
     this.logoUrl = `${this.baseUrl}${this.productLine.logo.url}`;
     console.log(this.logoUrl);
     this.insurers = this.productLine.insurers;
+
+
   }
 
+
+  light(id) {
+    //window.alert('Hello');
+    console.log(id);
+    document.getElementById(id).style.filter = "grayscale(0%)";
+  }
+
+  dark(id) {
+    //window.alert('Hello');
+    console.log(id);
+    document.getElementById(id).style.filter = "grayscale(100%)";
+  }
 }

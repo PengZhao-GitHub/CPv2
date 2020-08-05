@@ -19,15 +19,15 @@
         
         <div class="insurer">
             <div *ngFor="let insurer of insurers">
-                <a [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name, baseUrl+insurer.logo.url]">
-                    <img src="{{baseUrl}}{{ insurer.logo.url}}" alt="{{ insurer.name }}" class="companylogo">
-
+                <a  (mouseover)="light(productLine.name + insurer.id)" (mouseout)="dark(productLine.name + insurer.id)" id="companylogoLink" [routerLink]="['/products/', insurer.id, insurer.name, productLine.id, productLine.name, baseUrl+insurer.logo.url]">
+                    <img src="{{baseUrl}}{{ insurer.logo.url}}" alt="{{ insurer.name }}" 
+                        class="companylogo"
+                        id="{{productLine.name + insurer.id}}"
+                        >
 
                     <div>{{ insurer.name }}</div>
                 </a>
             </div>
         </div>
     </div>
-
-
 </div>

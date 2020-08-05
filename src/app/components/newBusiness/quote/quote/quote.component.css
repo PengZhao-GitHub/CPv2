@@ -4,10 +4,6 @@ pre {
 }
 
 
-
-
-
-
 .title {
     display: flex;
     align-items: center;
@@ -28,7 +24,7 @@ pre {
     
     /*background-color: #00A3E7;*/
 
-    background: rgba(0,0,0,0.7); 
+    background: rgba(0,0,0,0.8); 
 
     color: #fff;
     
@@ -99,7 +95,7 @@ pre {
 .insuredObject {
     border: var(--dev-border);
     width: 100%;
-    background-color: #aaa;
+    background-color: rgba(0,0,0,0.5); /*#aaa;*/
     color: #fff;
 
     text-align: left;
@@ -122,7 +118,6 @@ pre {
 .insuredData {
     border: var(--dev-border);
     width: 100%;
-    background-color: #aaa;
     color: #fff;
 
     text-align: left;

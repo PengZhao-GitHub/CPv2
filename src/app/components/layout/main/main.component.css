@@ -164,7 +164,11 @@ a {
     right: 22px;
     font-size: 36px;
     margin-left: 50px;
-    
+
+}
+
+.cp-side-nav .cp-btn-close:hover{
+    cursor: pointer;
 }
 
 .cp-side-nav .cp-btn-login{

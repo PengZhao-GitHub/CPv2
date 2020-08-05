@@ -66,7 +66,21 @@ export class QuoteComponent implements OnInit {
         let product = window.history.state; /*get state object*/
         console.log('inside of state:', Object.keys(product));
 
-        if (Object.keys(product).length != 1) {   //check if the sate object is availiable, there should be better way to do it. 
+        //Study: Spread Operator (...)
+        //************************************ */
+        const newState = {
+           ...product,
+           lifecycle: 'quote'
+        }
+        console.log("New Sate", newState);
+
+        //use Destructure to uppack values from objects and arrays
+        //******************************************************* */
+        const { insurer, product_line } = product; 
+        console.log("destructure", insurer, product_line);
+
+        //if (Object.keys(product).length != 1) {   //check if the sate object is availiable, there should be better way to do it. 
+        if (insurer != null) {    
           /* get CMS system id and product name */
           this.selectedInsurer = product.insurer.name;
           this.selectedInsurerID = product.insurer.id;
@@ -75,7 +89,7 @@ export class QuoteComponent implements OnInit {
           this.selectedProductLineID = product.product_line.id;
           this.selectedProductID = product.id; // CMS system id
           this.selectedProduct = product.name;
-          this.selectedProductCode = product.product_id;
+          this.selectedProductCode = product.product_id; //This is the product code used for API call
           /* end of getting CMS system id and product name */
 
           /* use local storage to save the data to avoid each time to go back to the front page to test any changes made*/
@@ -88,9 +102,11 @@ export class QuoteComponent implements OnInit {
           localStorage.setItem('selectedProduct', this.selectedProduct);
           localStorage.setItem('selectedProductCode', this.selectedProductCode);
           localStorage.setItem('selectedInsurerUrl',this.selectedInsurerUrl );
+          
 
         } else {
-          /* Retrive saved param from local storatge */
+          //window.alert('State object is empty!');
+          /*Retrive saved param from local storatge */
           this.selectedInsurerID = localStorage.getItem('selectedInsurerID');
           this.selectedInsurer = localStorage.getItem('selectedInsurer');
           this.selectedProductLineID = localStorage.getItem('selectedProductLineID');
@@ -100,9 +116,10 @@ export class QuoteComponent implements OnInit {
           this.selectedProduct = localStorage.getItem('selectedProduct');
           this.selectedProductCode = localStorage.getItem('selectedProductCode');
           this.selectedInsurerUrl = localStorage.getItem('selectedInsurerUrl');
+          
 
         }
-
+      
         //Get the product structure from PAS API
         //-------------------------------------------
         this.getProductDetaiFromPAS(this.selectedProductCode);
