@@ -4,13 +4,19 @@ import { MainComponent } from './components/layout/main/main.component';
 import { ProductLinesComponent } from './components/product-lines/product-lines.component';
 import { ProductsComponent } from './components/products/products.component';
 import { QuoteComponent } from './components/newBusiness/quote/quote/quote.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { ProfileComponent } from './components/auth/profile/profile.component';
+import { LogoutComponent } from './components/auth/logout/logout.component';
 
 
 
 const routes: Routes = [
   { path: '', component: ProductLinesComponent},
   { path: 'products/:companyid/:companyname/:productlineid/:productlinename/:url', component: ProductsComponent},
-  { path: 'quote', component: QuoteComponent}
+  { path: 'quote', component: QuoteComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'profile/:id', component: ProfileComponent},
+  { path: 'logout', component: LogoutComponent}
 ];
 
 @NgModule({

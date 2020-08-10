@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     
@@ -35,6 +36,14 @@ export class MainComponent implements OnInit {
     //window.alert('hello');
     //console.log(document.getElementsByClassName('cp-search-input')[0].value);
     //document.getElementsByClassName('cp-search-input')[0].style.visibility = 'hidden';
+  }
+
+  login() {
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    this.router.navigate(['/logout']);
   }
 
 }

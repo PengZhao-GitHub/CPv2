@@ -27,7 +27,8 @@
     <div class="cp-right-menu">
 
         <!--<i class="fas fa-search fa-2x"></i>-->
-        <i class="far fa-user-circle fa-lg"></i>
+        <i class="fas fa-sign-in-alt fa-lg" (click)="login()"></i>
+        <i class="fas fa-sign-out-alt fa-lg" (click)="logout()"></i>
         <i class="fas fa-shopping-cart fa-lg"></i>
 
 
@@ -36,7 +37,7 @@
 
 <div id="cp-side-menu" class="cp-side-nav">
     <a class="cp-btn-close" (click)="closeSideMenu()">&times;</a>
-    <a class="cp-btn-login" ><i class="far fa-user-circle fa-2x"></i>ログイン</a>
+    <a class="cp-btn-login" herf="/login"><i class="far fa-user-circle fa-2x"></i>ログイン</a>
     <br>
     <a [routerLink]="['/']" (click)="closeSideMenu()">保険商品一覧</a>
     <a href="#">リスク・プロファイリング</a>

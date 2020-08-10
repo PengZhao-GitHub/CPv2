@@ -10,7 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
-import { QuoteComponent } from './components/newBusiness/quote/quote/quote.component'
+import { QuoteComponent } from './components/newBusiness/quote/quote/quote.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { ProfileComponent } from './components/auth/profile/profile.component';
+import { LogoutComponent } from './components/auth/logout/logout.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { QuoteComponent } from './components/newBusiness/quote/quote/quote.compo
     ProductLineComponent,
     ProductsComponent,
     ProductComponent,
-    QuoteComponent
+    QuoteComponent,
+    LoginComponent,
+    ProfileComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
