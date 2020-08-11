@@ -28,3 +28,10 @@ main {
     padding: 10px;
     background: lightblue;
 }
+.local-btn{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    background: coral;
+}
