@@ -2,36 +2,43 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 960px;
+    width: 80%;
+    max-width: 500px;
     margin: 30px auto;
     padding: 0 10px;
     color: #333;
+    text-align: center;
 }
+
+main i span{
+    padding-left: 20px;
+}
+
 .google-btn{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    background: #ff5353;
+    background: #4285F4;
 }
 .facebook-btn{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    background: navy;
+    background: #4267B2;
 }
 .twitter-btn{
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    background: lightblue;
+    background: #1DA1F2;
 }
 .local-btn{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    background: coral;
+    background: #00A3E7;
 }

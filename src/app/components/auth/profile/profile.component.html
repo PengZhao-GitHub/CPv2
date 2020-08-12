@@ -1,6 +1,7 @@
-<h3>{{ profileID }}</h3>
-<div>{{ username }}</div>
-<div>{{ email }} </div>
-
-<button (click)="setCookie()">Set Cookie</button>
-<button (click)="readCookie()">Read Cookie</button>
+<div class="container">
+    
+    <img src="{{thumbnail}}" alt="">
+    <div>{{ username }}</div>
+    <div><i class="fas fa-at"></i>{{ email }} </div>
+    <div><i class="fas fa-id-badge"></i>{{ profileID }}</div>
+</div>

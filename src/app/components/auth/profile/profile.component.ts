@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   profileID: String;
   username: String;
   email: String;
-
+  thumbnail: String;
 
   constructor(private routeParam: ActivatedRoute,
     private accountService: AccountService,
@@ -31,6 +31,8 @@ export class ProfileComponent implements OnInit {
 
           this.username = userProfile.username;
           this.email = userProfile.email;
+          this.thumbnail = userProfile.thumbnail;
+
         }, (err) => {
           console.log('403 forbidden',err);
           this.router.navigate(['/login']);
