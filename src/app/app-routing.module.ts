@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'quote', component: QuoteComponent},
   { path: 'login', component: LoginComponent},
   { path: 'profile/:id', component: ProfileComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: 'logout', component: LogoutComponent}
 ];
 
