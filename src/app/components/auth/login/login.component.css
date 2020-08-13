@@ -1,44 +1,49 @@
 main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     width: 80%;
     max-width: 500px;
     margin: 30px auto;
-    padding: 0 10px;
+    padding: 0;
     color: #333;
     text-align: center;
+    border: var(--dev-border);
 }
 
 main i span{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .google-btn{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px;
+    padding: 3px;
     background: #4285F4;
+    border-radius: 3px;
 }
 .facebook-btn{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px;
+    padding: 3px;
     background: #4267B2;
+    border-radius: 3px;
 }
 .twitter-btn{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px;
+    padding: 3px;
     background: #1DA1F2;
+    border-radius: 3px;
 }
 .local-btn{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px;
+    padding: 3px;
     background: #00A3E7;
+    border-radius: 3px;
 }

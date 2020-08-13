@@ -20,8 +20,8 @@ export class AccountService {
     
     // HttpClient does not send cookie automaticly, you need to add it manually
     return this.http.get<any>(`${this.baseUrl}${this.profileapi}${id}`, {withCredentials: true});  //Attach cookie {withCredentials: true}, this will also cause CORS issue, need to fix reponse headers issues at server side
-
-
   }
+
+  
 
 }

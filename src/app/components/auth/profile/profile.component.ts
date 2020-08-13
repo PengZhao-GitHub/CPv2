@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AccountService } from 'src/app/services/account.service';
 import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-profile',
@@ -9,10 +10,13 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profileID: String;
-  username: String;
-  email: String;
-  thumbnail: String;
+
+
+
+  profileID: string;
+  username: string;
+  email: string;
+  thumbnail: string;
 
   constructor(private routeParam: ActivatedRoute,
     private accountService: AccountService,
@@ -25,6 +29,8 @@ export class ProfileComponent implements OnInit {
       console.log(this.profileID);
 
       if (this.profileID) {
+        // Save profileID to local storage
+        localStorage.setItem('profileID', this.profileID);
         //Get user profile 
         this.accountService.getProfile(this.profileID).subscribe(userProfile => {
           console.log(userProfile);
@@ -33,12 +39,29 @@ export class ProfileComponent implements OnInit {
           this.email = userProfile.email;
           this.thumbnail = userProfile.thumbnail;
 
+        //since login is successful, disable login and show logout
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('logout').style.display = 'inline';
+
         }, (err) => {
           console.log('403 forbidden',err);
+          localStorage.removeItem('profileID'); //just in case the profileID is still saved in the local storage
+          //since login fail, disable logout and show login 
+          document.getElementById('login').style.display = 'inline';
+        document.getElementById('logout').style.display = 'none';
+
           this.router.navigate(['/login']);
         })
       } else {
-        this.profileID = "The user has been logged out";
+        //this.profileID = "The user has been logged out";
+        localStorage.removeItem('profileID');
+        //since it has been logged out, disable logout and show login 
+        document.getElementById('login').style.display = 'inline';
+        document.getElementById('logout').style.display = 'none';
+        //this.cookieService.deleteAll();
+        console.log(document.cookie);
+        //browser.manage().deleteAllCookies();
+
       }
     });
   }

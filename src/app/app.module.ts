@@ -16,6 +16,7 @@ import { ProfileComponent } from './components/auth/profile/profile.component';
 import { LogoutComponent } from './components/auth/logout/logout.component'
 
 import { CookieService } from 'ngx-cookie-service';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    QRCodeModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

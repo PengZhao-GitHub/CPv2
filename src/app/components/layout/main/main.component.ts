@@ -8,10 +8,13 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
+  profileID: string;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
-    
+    this.profileID = localStorage.getItem('profileID');
+    console.log('main layout:', this.profileID);
   }
 
   openSideMenu() {
@@ -39,11 +42,10 @@ export class MainComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate(['/login']);
+      this.router.navigate(['/login']);
   }
 
   logout(){
-    this.router.navigate(['/logout']);
+      this.router.navigate(['/logout']);
   }
-
 }
