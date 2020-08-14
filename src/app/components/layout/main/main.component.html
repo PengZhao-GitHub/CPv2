@@ -28,6 +28,7 @@
 
         <!--<i class="fas fa-search fa-2x"></i>-->
         <i  id="login" class="fas fa-sign-in-alt fa-lg" (click)="login()"></i>
+        <i  id="profile" class="far fa-address-card fa-lg" (click)="showProfile()"></i>
         <i  id="logout" class="fas fa-sign-out-alt fa-lg" (click)="logout()"></i>
         <i class="fas fa-shopping-cart fa-lg"></i>
 
@@ -44,6 +45,8 @@
     <a href="#">見積もり</a>
     <a href="#">事故のご連絡</a>
     <a href="#">サービス</a>
+    <hr style="border-color: #fff;">
+    <a [routerLink]="['/admin']" (click)="closeSideMenu()"><i class="fas fa-cogs"></i>設定</a>
 </div>
 
 

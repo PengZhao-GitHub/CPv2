@@ -195,6 +195,7 @@ a {
     width: 100%;
     background: #fff;
 
+
     margin: 0;
     border: var(--dev-border);
 
@@ -343,6 +344,10 @@ a {
 
 
 #logout {
+    display: none;
+}
+
+#profile {
     display: none;
 }
 

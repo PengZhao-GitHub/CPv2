@@ -6,5 +6,11 @@
     <qrcode [qrdata]="profileID" [width]="128" [errorCorrectionLevel]="'M'" [elementType]="'svg'"></qrcode>
 </div>
 <div *ngIf="!profileID" class="container">
-    You have logged out. Please log in again to access your private data. 
+    <div>
+        You have logged out. Please log in again to access your private data. 
+    </div> 
+    <div class="container2">
+        <a (click)="login()"><i class="fas fa-sign-in-alt fa-2x"> <span>Login</span> </i></a>
+    </div>
+    
 </div>

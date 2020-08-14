@@ -7,15 +7,16 @@
     align-items: center;
     justify-content: center;
     border: var(--dev-border);
-    gap: 10px;
-    
+    gap: 20px;
     color: #616161;
+    
 }
 
 img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    border: 1px solid rgb(231, 229, 229);
     
 }
 
@@ -23,10 +24,7 @@ div {
     border: var(--dev-border);
 }
 
-i {
-    padding-right: 10px;
-    color: #00A3E7;
-}
+
 
 .name {
     font-size: 16px;
@@ -39,4 +37,35 @@ i {
 
 .id {
     font-size: 12px;
+}
+
+.id i {
+    padding-right: 10px;
+    color: #00A3E7;
+}
+
+
+.container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--dev-border);
+
+    color: #00A3E7;
+}
+
+a {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+span {
+    padding-left: 10px;
+}
+
+a:hover {
+    background-color: #f2f2f2;
+    box-shadow: 3px 3px 10px #aaa;
 }

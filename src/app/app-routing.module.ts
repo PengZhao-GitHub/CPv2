@@ -7,6 +7,7 @@ import { QuoteComponent } from './components/newBusiness/quote/quote/quote.compo
 import { LoginComponent } from './components/auth/login/login.component';
 import { ProfileComponent } from './components/auth/profile/profile.component';
 import { LogoutComponent } from './components/auth/logout/logout.component';
+import { AdminComponent } from './components/sys/admin/admin.component';
 
 
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'profile/:id', component: ProfileComponent},
   { path: 'profile', component: ProfileComponent},
-  { path: 'logout', component: LogoutComponent}
+  { path: 'logout', component: LogoutComponent},
+  { path: 'admin', component: AdminComponent}
 ];
 
 @NgModule({

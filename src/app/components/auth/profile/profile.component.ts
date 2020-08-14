@@ -41,6 +41,7 @@ export class ProfileComponent implements OnInit {
 
         //since login is successful, disable login and show logout
         document.getElementById('login').style.display = 'none';
+        document.getElementById('profile').style.display = 'inline';
         document.getElementById('logout').style.display = 'inline';
 
         }, (err) => {
@@ -48,6 +49,7 @@ export class ProfileComponent implements OnInit {
           localStorage.removeItem('profileID'); //just in case the profileID is still saved in the local storage
           //since login fail, disable logout and show login 
           document.getElementById('login').style.display = 'inline';
+          document.getElementById('profile').style.display = 'none';
         document.getElementById('logout').style.display = 'none';
 
           this.router.navigate(['/login']);
@@ -57,6 +59,7 @@ export class ProfileComponent implements OnInit {
         localStorage.removeItem('profileID');
         //since it has been logged out, disable logout and show login 
         document.getElementById('login').style.display = 'inline';
+        document.getElementById('profile').style.display = 'none';
         document.getElementById('logout').style.display = 'none';
         //this.cookieService.deleteAll();
         console.log(document.cookie);
@@ -76,4 +79,9 @@ export class ProfileComponent implements OnInit {
     let cookieValue = this.cookieService.get('myCookie');
     console.log('myCookie', cookieValue);
   }
+
+  login(){
+    this.router.navigate(['/login']);
+  }
+
 }

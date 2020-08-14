@@ -1,0 +1,6 @@
+.admin-container {
+    border: var(--dev-border);
+    width: 100%;
+    overflow: hidden;
+
+}

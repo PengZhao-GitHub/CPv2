@@ -48,4 +48,14 @@ export class MainComponent implements OnInit {
   logout(){
       this.router.navigate(['/logout']);
   }
+
+  showProfile() {
+      let profileID = localStorage.getItem('profileID');
+      if (profileID) {
+          this.router.navigate(['/profile', profileID]);
+      } else {
+          this.router.navigate(['/profile']);
+      }
+      
+  }
 }

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/layout/main/main.component';
 import { ProductLinesComponent } from './components/product-lines/product-lines.component';
 import { ProductLineComponent } from './components/product-line/product-line.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +17,9 @@ import { LogoutComponent } from './components/auth/logout/logout.component'
 
 import { CookieService } from 'ngx-cookie-service';
 import { QRCodeModule } from 'angularx-qrcode';
+import { AdminComponent } from './components/sys/admin/admin.component';
+import { TokenInterceptorService } from './services/token-interceptor.service'
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     QuoteComponent,
     LoginComponent,
     ProfileComponent,
-    LogoutComponent
+    LogoutComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,12 @@ import { QRCodeModule } from 'angularx-qrcode';
     FormsModule,
     QRCodeModule
   ],
-  providers: [CookieService],
+  providers: [CookieService, 
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

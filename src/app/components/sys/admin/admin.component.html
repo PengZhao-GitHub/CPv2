@@ -1,0 +1,16 @@
+<div class="admin-container">
+    <div class="token">
+        <div>
+            <label>Client name:</label>
+            <input [(ngModel)]="clientName">
+        </div>
+        <div>
+            <label>Client secret:</label>
+            <input [(ngModel)]="clientSecret">
+        </div>
+        <button (click)="getToken()">Submit</button>
+        <div>
+            <input [(ngModel)]="APIToken">
+        </div>
+    </div>
+</div>
