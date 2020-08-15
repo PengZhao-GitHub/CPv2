@@ -354,7 +354,7 @@ a {
 /* Hide menu */
 /*****************************/
 
-@media(max-width:730px){
+@media(max-width:780px){
     .cp-navbar-nav{
         display: none;
     }

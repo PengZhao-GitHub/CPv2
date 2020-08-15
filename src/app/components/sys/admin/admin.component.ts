@@ -13,9 +13,11 @@ import { AccountService } from 'src/app/services/account.service';
 })
 export class AdminComponent implements OnInit {
 
-  clientName: string = "Client";
+  baseUrl:string = 'http://localhost:5000/pas/api';
+  
+  clientName: string = "Account";
   clientSecret: string = "Secret";
-  APIToken: string = "";
+  APIToken: string = localStorage.getItem('PAS.API.Token');
 
   constructor(private accountService: AccountService) { }
 
@@ -23,17 +25,24 @@ export class AdminComponent implements OnInit {
   }
 
   getToken() {
+    
     let acc = {
       clientName: this.clientName,
       clientSecret: this.clientSecret
     }
-    this.accountService.getToken(acc).subscribe(result => {
-      console.log('Token', result);
-      this.APIToken = result.token;
-      console.log(this.APIToken);
-    })
 
-    localStorage.setItem('PAS.API.Token', this.APIToken);
+    this.accountService.getToken(acc).subscribe(
+      result => {
+        console.log('Token', result);
+        this.APIToken = result.token;
+        console.log(this.APIToken);
+        localStorage.setItem('PAS.API.Token', this.APIToken);
+      },
+      err => {
+        console.log(err.error);
+        this.APIToken = err.error;
+      }
+    )
   }
 
 }

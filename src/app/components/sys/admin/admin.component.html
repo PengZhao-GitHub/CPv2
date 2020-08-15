@@ -1,16 +1,24 @@
 <div class="admin-container">
+
     <div class="token">
-        <div>
-            <label>Client name:</label>
-            <input [(ngModel)]="clientName">
+        <div class="PASAPI-Token-Header">
+            <div>
+                <i class="fas fa-cogs fa-2x header-i"></i>API: Insurance Company
+            </div>
+            <div class="api-end-point">
+                <a href="{{baseUrl}}" target="_blank">API Endpoint: {{baseUrl}}</a>
+            </div>
         </div>
-        <div>
-            <label>Client secret:</label>
-            <input [(ngModel)]="clientSecret">
+        <div >
+            <i class="fas fa-user-circle fa-lg box-i"></i>
+            <input class="box-input" [(ngModel)]="clientName">
         </div>
-        <button (click)="getToken()">Submit</button>
-        <div>
-            <input [(ngModel)]="APIToken">
+        <div >
+            <i class="fas fa-key fa-lg box-i"></i>
+            <input type="password" class="box-input" [(ngModel)]="clientSecret">
         </div>
+
+        <button class="button-box" (click)="getToken()">Get Token</button>
+        <textarea class="token-box" cols="30" rows="5" [(ngModel)]="APIToken"></textarea>
     </div>
 </div>

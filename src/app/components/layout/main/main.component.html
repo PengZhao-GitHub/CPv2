@@ -38,7 +38,7 @@
 
 <div id="cp-side-menu" class="cp-side-nav">
     <a class="cp-btn-close" (click)="closeSideMenu()">&times;</a>
-    <a class="cp-btn-login" herf="/login"><i class="far fa-user-circle fa-2x"></i>ログイン</a>
+    <a class="cp-btn-login" [routerLink]="['/login']" (click)="closeSideMenu()"><i class="fas fa-sign-in-alt fa-2x"></i>ログイン</a>
     <br>
     <a [routerLink]="['/']" (click)="closeSideMenu()">保険商品一覧</a>
     <a href="#">リスク・プロファイリング</a>
@@ -46,7 +46,7 @@
     <a href="#">事故のご連絡</a>
     <a href="#">サービス</a>
     <hr style="border-color: #fff;">
-    <a [routerLink]="['/admin']" (click)="closeSideMenu()"><i class="fas fa-cogs"></i>設定</a>
+    <a [routerLink]="['/admin']" (click)="closeSideMenu()"><i class="fas fa-cogs"></i>&nbsp;設定</a>
 </div>
 
 

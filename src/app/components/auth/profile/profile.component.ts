@@ -37,20 +37,20 @@ export class ProfileComponent implements OnInit {
 
           this.username = userProfile.username;
           this.email = userProfile.email;
-          this.thumbnail = userProfile.thumbnail;
+          this.thumbnail = userProfile.thumbnail ? userProfile.thumbnail : '../assets/img/default.jpg';
 
-        //since login is successful, disable login and show logout
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('profile').style.display = 'inline';
-        document.getElementById('logout').style.display = 'inline';
+          //since login is successful, disable login and show logout
+          document.getElementById('login').style.display = 'none';
+          document.getElementById('profile').style.display = 'inline';
+          document.getElementById('logout').style.display = 'inline';
 
         }, (err) => {
-          console.log('403 forbidden',err);
+          console.log('403 forbidden', err);
           localStorage.removeItem('profileID'); //just in case the profileID is still saved in the local storage
           //since login fail, disable logout and show login 
           document.getElementById('login').style.display = 'inline';
           document.getElementById('profile').style.display = 'none';
-        document.getElementById('logout').style.display = 'none';
+          document.getElementById('logout').style.display = 'none';
 
           this.router.navigate(['/login']);
         })
@@ -80,7 +80,7 @@ export class ProfileComponent implements OnInit {
     console.log('myCookie', cookieValue);
   }
 
-  login(){
+  login() {
     this.router.navigate(['/login']);
   }
 
