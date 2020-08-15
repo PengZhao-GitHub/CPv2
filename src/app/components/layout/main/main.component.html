@@ -1,5 +1,3 @@
-
-
 <nav class="cp-navbar">
     <span class="cp-open-slide">
         <a (click)="openSideMenu()">
@@ -27,9 +25,9 @@
     <div class="cp-right-menu">
 
         <!--<i class="fas fa-search fa-2x"></i>-->
-        <i  id="login" class="fas fa-sign-in-alt fa-lg" (click)="login()"></i>
-        <i  id="profile" class="far fa-address-card fa-lg" (click)="showProfile()"></i>
-        <i  id="logout" class="fas fa-sign-out-alt fa-lg" (click)="logout()"></i>
+        <i id="login" class="fas fa-sign-in-alt fa-lg" (click)="login()"></i>
+        <i id="profile" class="far fa-address-card fa-lg" (click)="showProfile()"></i>
+        <i id="logout" class="fas fa-sign-out-alt fa-lg" (click)="logout()"></i>
         <i class="fas fa-shopping-cart fa-lg"></i>
 
 
@@ -38,14 +36,19 @@
 
 <div id="cp-side-menu" class="cp-side-nav">
     <a class="cp-btn-close" (click)="closeSideMenu()">&times;</a>
-    <a class="cp-btn-login" [routerLink]="['/login']" (click)="closeSideMenu()"><i class="fas fa-sign-in-alt fa-2x"></i>ログイン</a>
+    <a class="cp-btn-login" id="btn-login" [routerLink]="['/login']" (click)="closeSideMenu()">
+        <i class="fas fa-sign-in-alt fa-2x"></i>ログイン
+    </a>
+    <a class="cp-btn-logout" id="btn-logout" [routerLink]="['/logout']" (click)="closeSideMenu()">
+        <i class="fas fa-sign-out-alt fa-2x"></i>ログアウト
+    </a>
     <br>
     <a [routerLink]="['/']" (click)="closeSideMenu()">保険商品一覧</a>
     <a href="#">リスク・プロファイリング</a>
     <a href="#">見積もり</a>
     <a href="#">事故のご連絡</a>
     <a href="#">サービス</a>
-    <hr style="border-color: #fff;">
+    <hr style="border-color: #555;">
     <a [routerLink]="['/admin']" (click)="closeSideMenu()"><i class="fas fa-cogs"></i>&nbsp;設定</a>
 </div>
 
@@ -54,7 +57,7 @@
 
 
     <!-- Main contents -->
-    <router-outlet ></router-outlet>
+    <router-outlet></router-outlet>
 
     <!-- Go back to top -->
     <a class="gotop" id="gotop" (click)="goToTop()"><i class="fas fa-chevron-up fa-2x"></i></a>

@@ -43,6 +43,9 @@ export class ProfileComponent implements OnInit {
           document.getElementById('login').style.display = 'none';
           document.getElementById('profile').style.display = 'inline';
           document.getElementById('logout').style.display = 'inline';
+          // update slide menu -> disable login and show logout
+          document.getElementById('btn-login').style.display = 'none';
+          document.getElementById('btn-logout').style.display = 'flex';
 
         }, (err) => {
           console.log('403 forbidden', err);
@@ -51,6 +54,9 @@ export class ProfileComponent implements OnInit {
           document.getElementById('login').style.display = 'inline';
           document.getElementById('profile').style.display = 'none';
           document.getElementById('logout').style.display = 'none';
+          // update slide menu -> disable logout and show logoin
+          document.getElementById('btn-login').style.display = 'flex';
+          document.getElementById('btn-logout').style.display = 'none';
 
           this.router.navigate(['/login']);
         })
@@ -61,12 +67,18 @@ export class ProfileComponent implements OnInit {
         document.getElementById('login').style.display = 'inline';
         document.getElementById('profile').style.display = 'none';
         document.getElementById('logout').style.display = 'none';
+        // update slide menu -> disable logout and show logoin
+        document.getElementById('btn-login').style.display = 'flex';
+        document.getElementById('btn-logout').style.display = 'none';
+
         //this.cookieService.deleteAll();
         console.log(document.cookie);
         //browser.manage().deleteAllCookies();
 
       }
     });
+
+    window.scroll(0,0);
   }
 
   setCookie() {

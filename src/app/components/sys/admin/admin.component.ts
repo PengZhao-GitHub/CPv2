@@ -16,7 +16,7 @@ export class AdminComponent implements OnInit {
   baseUrl:string = 'http://localhost:5000/pas/api';
   
   clientName: string = "Account";
-  clientSecret: string = "Secret";
+  clientSecret: string = "PASAPISecret";
   APIToken: string = localStorage.getItem('PAS.API.Token');
 
   constructor(private accountService: AccountService) { }

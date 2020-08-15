@@ -186,6 +186,23 @@ a {
     margin-right: 10px;
 }
 
+.cp-side-nav .cp-btn-logout{
+    border: var(--dev-border);
+    /*display: flex;*/
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    font-size: 15px;
+    margin-right: 50px;
+    align-items: center;
+
+}
+
+.cp-side-nav .cp-btn-logout i {
+    margin-right: 10px;
+}
+
 /* Main display area setting */
 #cp-main{
     transition: margin-left var(--slide-menu-time);
