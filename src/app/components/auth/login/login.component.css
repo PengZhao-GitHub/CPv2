@@ -39,6 +39,25 @@ main i span{
     background: #1DA1F2;
     border-radius: 3px;
 }
+
+.linkedin-btn{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 3px;
+    background: #2867B2;
+    border-radius: 3px;
+}
+
+.line-btn{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 3px;
+    background: #00B900;
+    border-radius: 3px;
+}
+
 .local-btn{
     color: #fff;
     text-decoration: none;
@@ -46,4 +65,9 @@ main i span{
     padding: 3px;
     background: #00A3E7;
     border-radius: 3px;
+}
+
+a:hover {
+    
+    box-shadow: 2px 2px 2px #aaa;
 }
