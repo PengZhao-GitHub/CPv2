@@ -275,11 +275,11 @@ export class QuoteComponent implements OnInit {
             this.premium = counter; 
           }
         }
-
         //Call the function
         updateCount();
-
-      });
+      },
+      (err) => window.alert(err.error + ": GetQuote, please check API Token")
+      );
     }
   }
 

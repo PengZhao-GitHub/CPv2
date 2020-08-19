@@ -7,20 +7,20 @@ import { HttpInterceptor } from '@angular/common/http';
 })
 export class TokenInterceptorService implements HttpInterceptor {
 
-  PASAPIToken = localStorage.getItem('PAS.API.Token');
-
   constructor() { }
 
   intercept(req, next) {
+
+    const PASAPIToken = localStorage.getItem('PAS.API.Token');
     
     console.log(req);
-    console.log('TokenInterceptorService:', this.PASAPIToken);
+    console.log('TokenInterceptorService:', PASAPIToken);
 
     //Attached the API token for PAS API only 
     if (req.url.indexOf("5000") >= 0) {
       let tokenizedReq = req.clone({
         setHeaders: {
-          Authorization: 'Bearer ' + this.PASAPIToken
+          Authorization: 'Bearer ' + PASAPIToken
         }
       })
       return next.handle(tokenizedReq);
