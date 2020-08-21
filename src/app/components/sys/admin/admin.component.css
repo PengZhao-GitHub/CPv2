@@ -2,16 +2,20 @@
     border: var(--dev-border);
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
-.token {
+.admin-card {
     width: 90%; 
     max-width: 500px;
     min-width: 200px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 50px;
-   
+    
+
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -19,12 +23,14 @@
     border: var(--dev-border);
 
     color: #616161;
+    background: #f2f2f2;
+    box-shadow: 5px 5px 5px #f2f2f2;
 
 }
 
-.PASAPI-Token-Header {
+.admin-card-header {
     border: var(--dev-border);
-    background: #3b5998; /* #555;#808080;#00A3E7;*/
+    background: #555; /*#3b5998;  #555;#808080;#00A3E7;*/
     color: #fff;
 
     font-size: 18px;
@@ -42,32 +48,33 @@
 
 }
 
-.PASAPI-Token-Header div {
+.admin-card-Header div {
     display: flex;
     align-items: center;
     
 }
 
-.PASAPI-Token-Header i {
+.admin-card-header i {
     padding-right: 10px;
     
 }
 
 .api-end-point{
-    margin-top: 10px;
-    padding-top: 5px;
-    font-size: 10px;
-    font-style: italic;
+    border: 1px #aaa solid;
 
-    border-top: 1px #aaa solid;
-    
+    border-radius: 3px;
+
+    color: #555;
+    background: #fff;
+
+    font-size: 14px;
+    font-style: italic;
     
 }
 
 .api-end-point a {
 
     text-decoration: none;
-    color: #fff;
     padding-left: 3px;
     padding-right: 3px;
 }

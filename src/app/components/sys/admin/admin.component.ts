@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpHeaders } from '@angular/common/http';
 import { AccountService } from 'src/app/services/account.service';
-
+import { APIEndpoints } from './APIEndPoints';
 
 
 
@@ -12,6 +12,13 @@ import { AccountService } from 'src/app/services/account.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+
+  CMS_URL:string = APIEndpoints.CMS_URL;
+  PAS_URL:string = APIEndpoints.PAS_URL;
+  AUTH_GATEWAY_URL:string = APIEndpoints.AUTH_GATEWAY_URL;
+  AUTH_URLs:Object = APIEndpoints.AUTH_URLs;
+  AUTH_CALLBACK_URL:string = APIEndpoints.AUTH_CALLBACK_URL;
+
 
   baseUrl:string = 'http://localhost:5000/pas/api';
   
