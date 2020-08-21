@@ -14,6 +14,7 @@ import { APIEndpoints } from './APIEndPoints';
 export class AdminComponent implements OnInit {
 
   CMS_URL:string = APIEndpoints.CMS_URL;
+  CMS_API_URLs:Object = APIEndpoints.CMS_API_URLs;
   PAS_URL:string = APIEndpoints.PAS_URL;
   AUTH_GATEWAY_URL:string = APIEndpoints.AUTH_GATEWAY_URL;
   AUTH_URLs:Object = APIEndpoints.AUTH_URLs;

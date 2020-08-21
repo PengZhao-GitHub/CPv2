@@ -9,7 +9,11 @@
 
         </div>
         <div class="api-end-point">
-            <a href="{{CMS_URL}}" target="_blank">API Endpoint: {{CMS_URL}}</a>
+            <a href="{{CMS_URL}}" target="_blank">Admin: {{CMS_URL}}</a>
+        </div>
+
+        <div *ngFor="let item of CMS_API_URLs" class="api-end-point">
+            <a href="{{item.url}}" target="_blank" style="padding-left:20px;">{{item.category}}:{{item.url}}</a>
         </div>
 
     </div>

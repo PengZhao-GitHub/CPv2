@@ -1,6 +1,24 @@
 export const APIEndpoints = {
 
     CMS_URL: 'http://localhost:1337',
+    CMS_API_URLs: [
+        {
+            category: 'product lines',
+            url: 'http://localhost:1337/product-lines'
+        },
+        {
+            category: 'products',
+            url: 'http://localhost:1337/products'
+        },
+        {
+            category: 'coverages',
+            url: 'http://localhost:1337/coverages'
+        },
+        {
+            category: 'showcases',
+            url :'http://localhost:1337/showcases'
+        }
+    ],
     PAS_URL: 'http://localhost:5000',
     AUTH_GATEWAY_URL: 'http://localhost:3000',
     AUTH_URLs: [

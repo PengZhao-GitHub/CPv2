@@ -75,6 +75,7 @@
 .api-end-point a {
 
     text-decoration: none;
+    color: #555;
     padding-left: 3px;
     padding-right: 3px;
 }
