@@ -29,8 +29,9 @@
             <a href="{{AUTH_GATEWAY_URL}}" target="_blank">Authenticaiton Gateway: {{AUTH_GATEWAY_URL}}</a>
         </div>
         <div *ngFor="let auth of AUTH_URLs" class="api-end-point">
-            <a href="{{auth.url}}" target="_blank" style="padding-left:20px;"><i class="fab fa-{{auth.provider}}"></i> {{auth.url}}</a>
+            <input type="checkbox" [(ngModel)]="selected[auth.provider]" (change)="selectAuthOptions()" [disabled]="auth.provider==='email'"> <a href="{{auth.url}}" target="_blank" style="padding-left:20px;"><i class="fab fa-{{auth.provider}}"></i> {{auth.url}}</a>
         </div>
+
         <div class="api-end-point">
             <a href="{{AUTH_CALLBACK_URL}}" target="_blank">Callback URL: {{AUTH_CALLBACK_URL}}</a>
         </div>

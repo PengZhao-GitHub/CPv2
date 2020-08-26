@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
 
   profileID: string;
 
+  selected = {};
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -17,6 +19,12 @@ export class LoginComponent implements OnInit {
     if(this.profileID) {
       this.router.navigate(['/profile',this.profileID])
     }
+
+    this.selected = JSON.parse(localStorage.getItem('OAuthOptions'));
+    console.log(this.selected);
+
+
+
     window.scroll(0,0); 
   }
 

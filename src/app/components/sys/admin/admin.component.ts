@@ -27,9 +27,27 @@ export class AdminComponent implements OnInit {
   clientSecret: string = "PASAPISecret";
   APIToken: string = localStorage.getItem('PAS.API.Token');
 
+  selected = {
+    google: true,
+    twitter: true,
+    line: true,
+    facebook: true,
+    linkedin: true,
+    email: true
+  }
+
   constructor(private accountService: AccountService) { }
 
   ngOnInit() {
+
+    var saved = JSON.parse(localStorage.getItem('OAuthOptions'));
+
+    if(saved) {
+      this.selected = saved;
+    }
+    
+    console.log(this.selected);
+    localStorage.setItem('OAuthOptions', JSON.stringify(this.selected));
   }
 
   getToken() {
@@ -51,6 +69,11 @@ export class AdminComponent implements OnInit {
         this.APIToken = err.error;
       }
     )
+  }
+
+  selectAuthOptions(){
+    console.log('Auth options', this.selected);
+    localStorage.setItem('OAuthOptions', JSON.stringify(this.selected));
   }
 
 }
