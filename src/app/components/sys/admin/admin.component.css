@@ -69,6 +69,10 @@
 
     font-size: 14px;
     font-style: italic;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
     
 }
 
@@ -146,3 +150,6 @@
 
 }
 
+.auth-option-selection {
+    margin-left:5px;
+}
